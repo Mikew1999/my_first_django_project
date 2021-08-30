@@ -19,6 +19,8 @@ def add_to_bag(request, item_id):
 
     bag = request.session.get('bag', {})
 
+    print(bag)
+
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
